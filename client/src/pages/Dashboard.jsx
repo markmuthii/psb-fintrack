@@ -1,22 +1,32 @@
+import { useState } from "react";
+
 const Dashboard = () => {
+  const [balance, setBalance] = useState(0);
+  const [income, setIncome] = useState(0);
+  const [expense, setExpense] = useState(0);
+
+  const updateBalance = () => {
+    setBalance(balance + 100);
+  };
+
   return (
     <>
       <section className="analytics flex justify-between gap-12">
         <div className="card border-orange-500">
           <div id="balance" className="amount">
-            0
+            {balance}
           </div>
           <div>Balance</div>
         </div>
         <div className="card border-green-500">
           <div id="income" className="amount">
-            0
+            {income}
           </div>
           <div>Income</div>
         </div>
         <div className="card border-red-500">
           <div id="expenses" className="amount">
-            0
+            {expense}
           </div>
           <div>Expenses</div>
         </div>
@@ -106,5 +116,3 @@ const Dashboard = () => {
 };
 
 export { Dashboard };
-
-// export default Dashboard;

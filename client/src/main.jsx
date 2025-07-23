@@ -6,12 +6,17 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import { Dashboard } from "./pages/Dashboard.jsx";
 import { Login } from "./pages/Login.jsx";
 import { Register } from "./pages/Register.jsx";
+import { Landing } from "./pages/Landing.jsx";
+import { State } from "./pages/State.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
+        <Route path="state" element={<State />} />
+
         <Route element={<App />}>
+          <Route path="/" element={<Landing />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
