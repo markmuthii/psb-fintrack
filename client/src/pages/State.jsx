@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 const State = () => {
-  const [numState, x] = useState(777);
+  const [numState, setNumState] = useState(777);
 
   // let num = 7;
   const [num, setNum] = useState(7);
 
   const incrementNum = () => {
-    x(numState + 1);
+    setNumState(numState + 1);
     setNum(num + 1);
 
     console.log(`Incremented Num: ${num}`);
